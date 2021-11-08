@@ -49,6 +49,10 @@ const App: React.FC = () => {
                                 )
                             }
                         />
+                        <Route
+                            path="*"
+                            render={() => <Redirect to={redirectPath} />}
+                        />
                     </Switch>
                 </Router>
             </AuthorizationContext.Provider>
